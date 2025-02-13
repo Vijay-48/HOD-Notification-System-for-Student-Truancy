@@ -1,0 +1,124 @@
+1. Set up your environment
+Before you can run any code, you'll need to make sure you have the required dependencies installed. The requirements.txt file should contain all the libraries necessary to run the system.
+
+Install dependencies: First, create a virtual environment (recommended) and activate it.
+
+Create the virtual environment:
+
+bash
+Copy
+python -m venv venv
+Activate the virtual environment:
+
+On Windows:
+bash
+Copy
+.\venv\Scripts\activate
+On macOS/Linux:
+bash
+Copy
+source venv/bin/activate
+Install the dependencies: Use pip to install the packages listed in requirements.txt:
+
+bash
+Copy
+pip install -r requirements.txt
+2. Running the Files
+Based on the structure you shared, here are general guidelines for running the various components of the project:
+
+Face Detection (YOLOv8)
+File: models/face_detection.py
+
+If you're running the YOLO-based face detection:
+
+bash
+Copy
+python models/face_detection.py
+Face Recognition
+File: models/face_recognition.py
+
+For running the face recognition model (likely to work with face embeddings):
+
+bash
+Copy
+python models/face_recognition.py
+Movement Analysis (LSTM)
+File: models/movement_analysis.py
+
+To perform LSTM-based movement analysis:
+
+bash
+Copy
+python models/movement_analysis.py
+Data Preprocessing and Training
+If you need to train your models, you’ll need to run the files in the train/ folder. These files seem to be placeholders for training.
+
+For training the face detection model:
+
+bash
+Copy
+python train/train_detection.py
+For face recognition training:
+
+bash
+Copy
+python train/train_recognition.py
+For LSTM movement analysis training:
+
+bash
+Copy
+python train/train_lstm.py
+Real-time Inference
+The inference scripts allow you to run demos for real-time detection or analysis.
+
+For live face detection:
+
+bash
+Copy
+python inference/live_detection.py
+For pattern analysis using LSTM:
+
+bash
+Copy
+python inference/pattern_analysis.py
+For truancy detection with timetable integration:
+
+bash
+Copy
+python inference/live_truancy_detection.py
+Utility Scripts
+Database operations: utils/db_handler.py
+
+If you want to perform database operations or setup, you can call these functions directly, or if they are used in other parts of the code, they'll be automatically invoked.
+
+Preprocessing: utils/preprocessing.py
+
+Use this to preprocess images and data. You may need to import and call functions from this file in the other scripts.
+
+Timetable checking: utils/timetable.py
+
+Use this to check if a student’s movement corresponds to a class/break time in the timetable.
+
+Configuration Files
+The config folder holds configuration files:
+
+config/db_config.py: Database configurations (for connecting to a database, perhaps MongoDB or MySQL).
+config/model_config.py: Holds model parameters like thresholds, file paths, etc.
+You might not need to run these directly, but rather, they are imported in other scripts.
+
+3. Running the Full System
+To run the entire system end-to-end (e.g., live truancy detection, face detection with recognition, and timetable matching), you can run the live truancy detection file. This might integrate all the components together:
+
+bash
+Copy
+python inference/live_truancy_detection.py
+This will likely run face detection, pattern analysis, and check the timetable in real-time.
+
+4. Database Setup
+Since there’s a db_config.py file, the system might depend on a database (like MySQL or MongoDB). Ensure that the database is set up and configured according to your db_config.py.
+
+You may need to initialize or populate the database before running certain parts of the code, such as the face recognition or attendance-tracking features.
+
+Additional Tips:
+Ensure the data files (students.json, images, timetable) are placed in the correct directories as expected by the scripts.
+If any errors occur, they will often point to missing libraries, data, or configurations. Double-check the file paths and configurations.

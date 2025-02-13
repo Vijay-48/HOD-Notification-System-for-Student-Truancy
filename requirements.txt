@@ -1,0 +1,13 @@
+numpy
+opencv-python-headless
+pillow
+torch
+torchvision
+tensorflow
+keras
+scikit-learn
+pandas
+flask
+sqlalchemy
+ultralytics
+facial_recognition
