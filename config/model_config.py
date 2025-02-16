@@ -23,11 +23,11 @@ MOVEMENT_CONFIG = {
 # Notification configuration parameters
 NOTIFICATION_CONFIG = {
     'email': {
-        'smtp_server': 'smtp.example.com',
+        'smtp_server': 'smtp.outlook.com',
         'smtp_port': 587,
-        'username': 'your_email@example.com',
-        'password': 'your_email_password',
-        'from_email': 'your_email@example.com',
-        'to_email': 'hod_email@example.com'
-    }
+        'username': 'truancydetector@outlook.com',
+        'password': 'Truancy#1234!',
+        'from_email': 'truancydetector@outlook.com',
+        'to_email': 'rockyvijju8@gmail.com'
+    }
 }
