@@ -1,0 +1,41 @@
+HOD Notification System for Student Turnacy/
+│
+├── data/
+│   ├── Images/                    # Student face images
+│   ├── students.json             # Student metadata
+|   ├── college_timetable.json     # College timetable
+│   ├── processed/                # Processed face embeddings
+│   └── movement_patterns/        # LSTM training data
+|       ├── extracted_faces/       # Extracted images from video
+|       └── Videos/                 # Videos for movement pattern analysis
+│
+├── models/
+│   ├── face_detection.py         # YOLO implementation
+│   ├── face_recognition.py       # FaceNet/DeepFace implementation
+│   └── movement_analysis.py      # LSTM model for pattern analysis
+│
+├── utils/
+│   ├── dataset.py               # Data loading and preprocessing
+│   ├── preprocessing.py         # Image preprocessing utilities
+│   ├── db_handler.py           # Database operations
+|   ├── timetable.py             # College timetable operations
+│   └── notification.py         # Alert system implementation
+│
+├── train/
+│   ├── train_detection.py      # YOLO training script
+|   ├── train_lastm_from_videos.py # Lastm training script from videos
+│   ├── train_recognition.py    # Face recognition training
+│   └── train_lstm.py          # Movement pattern training
+│
+├── inference/
+│   ├── live_detection.py      # Real-time CCTV processing
+│   └── pattern_analysis.py    # Movement pattern analysis
+│
+├── config/
+│   ├── __init__.py
+│   ├── db_config.py          # Database configurations
+│   └── model_config.py       # Model parameters
+|
+├── main.py
+│
+└── requirements.txt
